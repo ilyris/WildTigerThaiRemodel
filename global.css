@@ -36,10 +36,16 @@ h5 {
     font-family: 'Oswald', sans-serif;
     letter-spacing: 2px;
 }
-
+tr {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 5px;
+}
 #main-header {
     width: 100%;
     display: flex;
+    position: fixed;
+    z-index: 10;
     align-content: center;
     justify-content: center;
     flex-flow: row wrap;
@@ -95,10 +101,11 @@ h5 {
     background: url(background-image.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    height: 70vh;
+    height: 80vh;
     width: 100%;
-    background-position-y: 25%;
+    background-attachment: fixed;
     position: relative;
+    top: 10%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -112,13 +119,13 @@ h5 {
 }
 
 .home-text-container {
-    z-index: 10;
     position: relative;
     width: 55%;
     margin: 0 50px 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    top: 10%;
 }
 
 .homepage-heading {
@@ -218,23 +225,60 @@ h5 {
     border-bottom: 2px solid orange;
     background-color: #0000008f;
 }
+/* Caption */
+.caption-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+.caption-title {
+    font-size: 5rem;
+    width: 100%;
+    text-align: center;
+    padding-top: 40px;
+}
+.caption-text {
+    font-size: 2rem;
+    width: 40%;
+    box-sizing: border-box;
+    padding: 40px;
+    letter-spacing: 1px;
+    line-height: 30px;
+}
+.right-paragraph-container {
+    width: 40%;
+}
+.right-paragraph-container p {
+    width: 100%;
+}
+.caption-button-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 40px;
+    padding-bottom: 40px;
+}
 /* footer */
 #main-footer {
     background: #333;
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-around;
+    padding: 20px;
 }
 .table-title {
     font-size: 3rem;
     min-width: 300px;
     margin: 0 auto;
 }
-.hours-container {
+.footer-content-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    margin-left: 40px;
+}
+.footer-content-container.location {
+    margin-right: 40px;
 }
 .footer-table {
     font-size: 1.5rem;
@@ -248,11 +292,18 @@ h5 {
 .footer-table.location {
     display: flex;
     flex-direction: column;
+    height: auto;
 }
-.footer-table.location tr {
-    display: flex;
-    justify-content: space-between;
-    padding-bottom: 5px;
+.footer-table td {
+    letter-spacing: 1px;
+}
+.footer-content-container.location p {
+    min-width: 300px;
+    margin: 0 auto;
+    width: 300px;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    line-height: 25px;
 }
 #main-footer .main-navigation {
     width: 15%;
@@ -263,7 +314,6 @@ h5 {
     flex-direction: column;
     margin: 0;
     padding: 0;
-    height: 60%;
     margin-top: 10px;
     width: 100%;
 }
