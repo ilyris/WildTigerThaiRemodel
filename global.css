@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Lobster|Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Lobster|Montserrat|Oswald');
 
 
 body,
@@ -11,6 +11,7 @@ html {
     padding: 0;
     font-size: 10px;
     font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
 }
 
 p,
@@ -24,31 +25,45 @@ li {
     margin: 0;
     padding: 0;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 2px;
+}
+
 #main-header {
     width: 100%;
     display: flex;
     align-content: center;
     justify-content: center;
-    flex-flow: row wrap; 
+    flex-flow: row wrap;
     background: #fff;
 }
+
 .logo-container {
     width: 100%;
     justify-content: center;
     display: flex;
     margin-top: 20px;
 }
+
 .logo {
     font-size: 4rem;
     color: #000;
     font-family: 'Lobster', cursive;
 }
+
 .main-navigation {
     width: 100%;
     display: flex;
     justify-content: center;
     margin: 20px 0;
 }
+
 .main-ul {
     display: flex;
     width: 70%;
@@ -56,14 +71,24 @@ li {
     justify-content: space-around;
     font-size: 2.5rem;
 }
+
 .main-ul {
     list-style: none;
     padding: 0 10px;
 }
+
 .main-links {
     text-decoration: none;
     color: #000;
+    transition: all ease-in-out 220ms;
+    font-weight: 400;
 }
+
+.main-links:hover {
+    color: rgb(185, 121, 0);
+    letter-spacing: 1px;
+}
+
 #home {
     background: url(background-image.jpg);
     background-size: cover;
@@ -74,23 +99,119 @@ li {
     position: relative;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
+
 .background-image-overlay {
     position: absolute;
     height: 100%;
     width: 100%;
-    background: rgba(0,0,0,0.6);
+    background: rgba(0, 0, 0, 0.6);
 }
+
 .home-text-container {
     z-index: 10;
     position: relative;
-    width: 50%;
+    width: 55%;
     margin: 0 50px 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
+
 .homepage-heading {
-    font-size: 3rem;
+    font-size: 6.5rem;
     margin: 10px 0;
 }
+
 .homepage-slogan {
     font-size: 2.5rem;
+}
+
+.menu-button-container {
+    height: 100px;
+    display: flex;
+    align-items: center;
+}
+
+.menu-button {
+    text-decoration: none;
+    font-size: 2rem;
+    color: #fff;
+    box-sizing: border-box;
+    padding: 10px 50px;
+    border: 2px solid #fff;
+    transition: all ease-in-out 400ms;
+}
+
+.menu-button:hover {
+    background: orange;
+    transform: translateX(10%);
+}
+
+/* Product section */
+#products {
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    background: #fff;
+}
+
+.tri-column-card-container {
+    width: 90%;
+    height: 75%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    margin: 0 auto;
+}
+
+.card-link {
+    width: 30%;
+    text-decoration: none;
+    color: #fff;
+    overflow: hidden;
+    position: relative;
+}
+.card-link:hover .tri-card {
+    transform: scale(1.1);
+}
+.card-title-container {
+    position: relative;
+    z-index: 2;
+}
+
+
+
+.tri-card-left,
+.tri-card-mid,
+.tri-card-right {
+    background: url(specials1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+    transition: all ease-in-out 300ms;
+}
+
+.tri-card-mid {
+    background: url(contact.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+.tri-card-right {
+    background: url(bar-background.jpeg);
+    background-position: center;
+
+} 
+
+.card-title {
+    font-size: 5em;
+    text-align: center;
+    border-bottom: 2px solid orange;
+    background-color: #0000008f;
 }
