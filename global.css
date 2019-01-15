@@ -27,6 +27,7 @@ li,td {
 }
 a {
     text-decoration: none;
+    color: #fff;
 }
 h1,
 h2,
@@ -164,6 +165,7 @@ tr {
     display: flex;
     align-items: center;
     background: #fff;
+    position: relative;
 }
 
 .tri-column-card-container {
@@ -226,6 +228,27 @@ tr {
     background-color: #0000008f;
 }
 /* Caption */
+#caption {
+    position: relative;
+    overflow: hidden;
+}
+.eclipse {
+    position: absolute;
+}
+.eclipse.far-left {
+    top: 10%;
+    left: -250px;
+    width: 500px;
+}
+.eclipse.middle {
+    right: 35%;
+    width: 400px;
+    bottom: -150px;
+}
+.eclipse.far-right {
+    top: -25%;
+    right: -100px;
+}
 .caption-container {
     display: flex;
     flex-flow: row wrap;
@@ -236,6 +259,7 @@ tr {
     width: 100%;
     text-align: center;
     padding-top: 40px;
+    z-index: 1;
 }
 .caption-text {
     font-size: 2rem;
@@ -244,9 +268,12 @@ tr {
     padding: 40px;
     letter-spacing: 1px;
     line-height: 30px;
+    z-index: 1;
 }
 .right-paragraph-container {
     width: 40%;
+    position: relative;
+    z-index: 1;
 }
 .right-paragraph-container p {
     width: 100%;
@@ -264,9 +291,11 @@ tr {
     display: flex;
     flex-flow: row wrap;
     padding: 20px;
+    justify-content: space-around;
+    position: relative;
 }
 .table-title {
-    font-size: 3rem;
+    font-size: 2.5rem;
     min-width: 300px;
     margin: 0 auto;
 }
@@ -281,7 +310,7 @@ tr {
     margin-right: 40px;
 }
 .footer-table {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     min-width: 300px;
     box-sizing: border-box;
     margin: 0 auto;
@@ -301,7 +330,7 @@ tr {
     min-width: 300px;
     margin: 0 auto;
     width: 300px;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     letter-spacing: 1px;
     line-height: 25px;
 }
@@ -319,13 +348,24 @@ tr {
 }
 #main-footer .main-links {
     color: #fff;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
 }
 #main-footer iframe {
     min-width: 350px;
     max-width: 400px;
     height: 300px;
     padding: 10px;
+}
+.contact-text-container {
+    width: 100%;
+    margin-top: 20px;
+}
+.contact-text-container a {
+    font-size: 1.2rem;
+    transition: all ease-in-out 200ms;
+}
+.contact-text-container a:hover {
+    color: #999;
 }
 .copyright {
     width: 100%;
