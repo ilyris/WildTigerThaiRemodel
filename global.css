@@ -21,7 +21,7 @@ h3,
 h4,
 h5,
 ul,
-li {
+li,td {
     margin: 0;
     padding: 0;
 }
@@ -177,6 +177,7 @@ h5 {
 }
 .card-link:hover .tri-card {
     transform: scale(1.1);
+    filter: grayscale(.8);
 }
 .card-title-container {
     position: relative;
@@ -222,28 +223,39 @@ h5 {
     background: #333;
     display: flex;
     flex-flow: row wrap;
+    justify-content: space-around;
 }
-.store-hours-title {
+.table-title {
     font-size: 3rem;
     min-width: 300px;
     margin: 0 auto;
 }
 .hours-container {
-    width: 40%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 .footer-table {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     min-width: 300px;
     box-sizing: border-box;
     margin: 0 auto;
     padding: 15px 0;
+    height: 80%;
+}
+
+.footer-table.location {
+    display: flex;
+    flex-direction: column;
+}
+.footer-table.location tr {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 5px;
 }
 #main-footer .main-navigation {
-    width: 40%;
+    width: 15%;
     flex-direction: column;
     margin: 0;
 }
@@ -253,10 +265,17 @@ h5 {
     padding: 0;
     height: 60%;
     margin-top: 10px;
+    width: 100%;
 }
 #main-footer .main-links {
     color: #fff;
     font-size: 1.6rem;
+}
+#main-footer iframe {
+    min-width: 350px;
+    max-width: 400px;
+    height: 300px;
+    padding: 10px;
 }
 .copyright {
     width: 100%;
