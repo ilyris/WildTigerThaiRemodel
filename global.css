@@ -5,7 +5,7 @@ body,
 html {
     width: 100%;
     color: #fff;
-    background: #0f0f0f;
+    background: #fff;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -51,6 +51,8 @@ tr {
     justify-content: center;
     flex-flow: row wrap;
     background: #fff;
+    box-shadow: 0px 2px 10px 0px #999;
+    top: 0;
 }
 
 .logo-container {
@@ -110,6 +112,7 @@ tr {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 140px;
 }
 
 .background-image-overlay {
@@ -126,7 +129,6 @@ tr {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    top: 10%;
 }
 
 .homepage-heading {
@@ -231,6 +233,7 @@ tr {
 #caption {
     position: relative;
     overflow: hidden;
+    background: #000;
 }
 .eclipse {
     position: absolute;
@@ -385,21 +388,21 @@ a.designer {
 /* Menu Page */
 
 #menu-wrapper {
-    top: 140px;
-    height: 2000px;
     position: relative;
-    padding: 100px 100px;
+    padding: 100px;
     background: #fff;
+    margin-top: 140px;
 }
 #menu {
-    background: #000;
-    padding: 100px;
+    background: #fff;
+    width: 80%;
+    margin: 0 auto;
 }
 .dish-title {
     font-size: 7rem;
     color: rgb(185, 121, 0);
     padding-bottom: 20px;
-    border-bottom: 1px solid #fff;
+    border-bottom: 3px solid rgb(8, 8, 8);;
     width: 100%;
     text-transform: capitalize;
     letter-spacing: 5px;
@@ -433,10 +436,11 @@ p.product-name {
     font-size: 2rem;
     width: 50%;
     text-align: right;
-    color: #fff;
+    color: rgb(8, 8, 8);
 }
 p.product-description {
     font-size: 1.8rem;
     padding: 10px 0;
+    color: rgb(8, 8, 8);
 }
 
