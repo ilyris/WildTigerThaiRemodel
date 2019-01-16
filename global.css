@@ -423,6 +423,7 @@ a.designer {
     padding: 10px;
     box-sizing: border-box;
     margin: 20px 0;
+    border-bottom: 1px solid #a2a2a2;
 }
 .food-information-wrapper p {
     letter-spacing: 2px;
