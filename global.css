@@ -523,5 +523,11 @@ input.submit-button {
     font-size: 3rem;
     min-height: 50px;
     border-radius: 5px;
+    cursor: pointer;
+    transition: all ease-in-out 220ms;
+}
+input.submit-button:hover {
+    color: #ffa500;
+    background-color: rgb(39, 39, 39);
 }
 
