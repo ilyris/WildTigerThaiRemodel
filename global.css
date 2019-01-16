@@ -382,3 +382,61 @@ a.designer {
 .designer:hover {
     color: #ffd17c;
 }
+/* Menu Page */
+
+#menu-wrapper {
+    top: 140px;
+    height: 2000px;
+    position: relative;
+    padding: 100px 100px;
+    background: #fff;
+}
+#menu {
+    background: #000;
+    padding: 100px;
+}
+.dish-title {
+    font-size: 7rem;
+    color: rgb(185, 121, 0);
+    padding-bottom: 20px;
+    border-bottom: 1px solid #fff;
+    width: 100%;
+    text-transform: capitalize;
+    letter-spacing: 5px;
+    margin-bottom: 50px;
+}
+.dish-container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.food-information-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    width: 45%;
+    min-width: 275px;
+    max-width: 48%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 20px 0;
+}
+.food-information-wrapper p {
+    letter-spacing: 2px;
+}
+p.product-name {
+    font-size: 2.2rem;
+    width: 50%;
+    color: #8e5c00;
+    font-weight: bold;
+}
+.product-price {
+    font-size: 2rem;
+    width: 50%;
+    text-align: right;
+    color: #fff;
+}
+p.product-description {
+    font-size: 1.8rem;
+    padding: 10px 0;
+}
+
