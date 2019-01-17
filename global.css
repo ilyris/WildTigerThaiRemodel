@@ -96,10 +96,10 @@ tr {
 }
 
 .main-links:hover {
-  color: rgb(185, 121, 0);
+  color: #ea9700;
   letter-spacing: 1px;
 }
-
+/* Home section */
 #home {
   background: url(background-image.jpg);
   background-size: cover;
@@ -132,12 +132,12 @@ tr {
 }
 
 .homepage-heading {
-  font-size: 6.5rem;
+  font-size: 7.5rem;
   margin: 10px 0;
 }
 
 .homepage-slogan {
-  font-size: 2.5rem;
+  font-size: 3rem;
 }
 
 .menu-button-container {
@@ -175,7 +175,7 @@ tr {
   left: 0;
   right: 0;
   bottom: 0;
-  background: #ffa600;
+  background: #ea9700;
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
   -webkit-transform-origin: 0 50%;
@@ -263,10 +263,8 @@ tr {
 #caption {
   position: relative;
   overflow: hidden;
-
-  background-color: #2d3436;
-  background-image: linear-gradient(315deg, #2d3436 0%, #d3d3d3 74%);
-  
+  background-color: #ff4e00;
+  background-image: linear-gradient(315deg, #ff4e00 0%, #ea9700 74%);
   
 }
 .eclipse {
@@ -291,7 +289,8 @@ tr {
   flex-flow: row wrap;
   justify-content: center;
 }
-.caption-title {
+.caption-title,
+.testimonials-title {
   font-size: 5rem;
   width: 100%;
   text-align: center;
@@ -322,6 +321,82 @@ tr {
   padding-left: 40px;
   padding-bottom: 40px;
 }
+/* Testimonial Slider */
+#testimonials {
+    height: 400px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.testimonial-slider {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0px 40px 40px 40px;
+    box-sizing: border-box;
+}
+
+#testimonials .next,
+#testimonials .previous {
+    height: 50px;
+    width: 50px;
+    margin: 0 30px;
+    cursor: pointer;
+    transition: all ease-in-out 200ms;
+    display: flex;
+    justify-content: center;
+    transform: translateY(-100%);
+}
+
+#testimonials .next i,
+#testimonials .previous i {
+    padding: 0;
+    font-size: 50px;
+    transition: all ease-in-out 180ms;
+    color: #000;
+}
+
+#testimonials .next i:hover,
+#testimonials .previous i:hover {
+    color: #ea9700;
+}
+
+.slide-container {
+    display: none;
+    font-size: 28px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    align-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    height: 100%;
+}
+
+.slide-container p {
+    text-align: center;
+    width: 70%;
+    color: #000;
+    margin: 0;
+    padding: 1.5rem 0;
+}
+
+.customers-name {
+    font-weight: bold;
+    font-size: 4rem;
+    color: #ea9700;
+    font-style: italic;
+}
+.testimonials-title {
+    color: #000;
+    padding: 40px;
+    box-sizing: border-box;
+    font-size: 6rem;
+}
+
 /* footer */
 #main-footer {
   background: #333;
@@ -412,12 +487,12 @@ tr {
 }
 a.designer {
   text-decoration: none;
-  color: #ffa500;
+  color: #ea9700;
   padding: 0 10px;
   transition: all ease-in-out 200ms;
 }
 .designer:hover {
-  color: #ffd17c;
+  color: #ffa500;
 }
 /* Menu Page */
 
@@ -428,16 +503,17 @@ a.designer {
   margin-top: 140px;
 }
 #menu {
-  background: #fff;
+  background: #000;
   width: 80%;
   margin: 0 auto;
+  padding: 40px;
 }
 .dish-title,
 .page-title {
   font-size: 7rem;
-  color: rgb(185, 121, 0);
+  color: #fff;
   padding-bottom: 20px;
-  border-bottom: 3px solid rgb(8, 8, 8);
+  border-bottom: 2px solid #a2a2a2;
   width: 100%;
   text-transform: capitalize;
   letter-spacing: 5px;
@@ -465,19 +541,19 @@ a.designer {
 p.product-name {
   font-size: 2.2rem;
   width: 50%;
-  color: #8e5c00;
+  color: #ea9700;
   font-weight: bold;
 }
 .product-price {
   font-size: 2rem;
   width: 50%;
   text-align: right;
-  color: rgb(8, 8, 8);
+  color: #fff;
 }
 p.product-description {
   font-size: 1.8rem;
   padding: 10px 0;
-  color: rgb(8, 8, 8);
+  color: #fff;
 }
 /* contact page */
 #contact-page-container {
@@ -492,6 +568,7 @@ p.product-description {
 }
 .page-title {
   width: 100%;
+  color: #000;
 }
 .location-container {
   color: #000;
@@ -535,15 +612,22 @@ p.product-description {
 }
 form.contact-form input {
   height: 30px;
+  border: 3px solid #000;
 }
 form.contact-form input:hover,
-form.contact-form textarea:hover {
-    border: 2px solid #b97900;
+form.contact-form textarea:hover,
+form.contact-form input:active,
+form.contact-form textarea:active,
+form.contact-form input:focus,
+form.contact-form textarea:focus {
+    border: 3px solid #ea9700;
+    outline-width: 0;
 }
 .contact-form .label {
   color: #000;
   padding: 10px 0;
   font-size: 2rem;
+  font-weight: 600;
 }
 .contact-form textarea {
   height: 150px;
@@ -553,11 +637,12 @@ form.contact-form textarea:hover {
   min-width: 100%;
   max-width: 100%;
   box-sizing: border-box;
+  border: 3px solid #000;
 }
 input.submit-button {
   width: 40%;
   margin-top: 25px;
-  color: #b97900;
+  color: #ea9700;
   background: #000;
   border: none;
   font-size: 3rem;
