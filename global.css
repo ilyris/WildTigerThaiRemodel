@@ -4,13 +4,15 @@ body,
 html {
   width: 100%;
   color: #fff;
-  background: #fff;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-size: 10px;
   font-family: "Montserrat", sans-serif;
   scroll-behavior: smooth;
+  background-color: #fff;
+background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-3.png");
+/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
 }
 
 p,
@@ -93,11 +95,42 @@ tr {
   color: #000;
   transition: all ease-in-out 220ms;
   font-weight: 400;
+  position: relative;
 }
 
 .main-links:hover {
   color: #ea9700;
-  letter-spacing: 1px;
+}
+.main-links::before {
+  content: '';
+  position: absolute;
+  bottom: 40%;
+  left: 0px;
+  width: 100%;
+  height: 2px;
+  background: #000;
+  display: block;
+  -webkit-transform-origin: left top;
+  -ms-transform-origin: left top;
+  transform-origin: left top;
+  -webkit-transform: scale(0, 1);
+  -ms-transform: scale(0, 1);
+  transform: scale(0, 1);
+  -webkit-transition: transform 0.4s cubic-bezier(1, 0, 0, 1);
+  transition: transform 0.4s cubic-bezier(1, 0, 0, 1)
+}
+
+.main-links:hover::before {
+  -webkit-transform-origin: right top;
+  -ms-transform-origin: right top;
+  transform-origin: right top;
+  -webkit-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  transform: scale(1, 1)
+}
+
+.main-links:hover {
+  color: #ea9700;
 }
 /* Home section */
 #home {
@@ -502,11 +535,13 @@ a.designer {
   background: #fff;
   margin-top: 140px;
 }
-#menu {
+#menu,
+.main-wrapper {
   background: #000;
   width: 80%;
   margin: 0 auto;
   padding: 40px;
+  border-radius: 10px;
 }
 .dish-title,
 .page-title {
@@ -519,10 +554,12 @@ a.designer {
   letter-spacing: 5px;
   margin-bottom: 20px;
 }
-.dish-container {
+.dish-container,
+.content-container.contact {
+  width: 100%;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
 }
 .food-information-wrapper {
   display: flex;
@@ -561,18 +598,13 @@ p.product-description {
   padding: 100px;
 }
 .main-wrapper {
-  margin: 0 auto;
-  width: 80%;
   display: flex;
   flex-flow: row wrap;
 }
-.page-title {
-  width: 100%;
-  color: #000;
-}
+
 .location-container {
-  color: #000;
-  width: 50%;
+  color: #fff;
+  width: 45%;
   padding: 20px 20px 20px 0;
   box-sizing: border-box;
 }
@@ -582,16 +614,22 @@ p.product-description {
   height: 60%;
 }
 .contact-page-title {
-  font-size: 2.4rem;
+  font-size: 3rem;
+}
+.address-container {
+  margin-top: 20px;
 }
 .address-container p {
   font-size: 2rem;
   letter-spacing: 2px;
   padding-top: 10px;
 }
-.address-container a {
-  color: #000;
+.phone-number-container a {
+  color: #fff;
   font-size: 2rem;
+}
+.phone-number-container {
+  margin: 20px 0;
 }
 .address-container div {
   width: 100%;
@@ -599,7 +637,7 @@ p.product-description {
 }
 /* Form */
 .form-container {
-  width: 50%;
+  width: 45%;
   box-sizing: border-box;
   padding: 20px 0;
   display: flex;
@@ -608,11 +646,15 @@ p.product-description {
 .contact-form {
   display: flex;
   flex-direction: column;
-  width: 75%;
+  width: 100%;
 }
 form.contact-form input {
   height: 30px;
-  border: 3px solid #000;
+  background: black;
+  border: none;
+  font-size: 2rem;
+  color: #fff;
+  border-bottom: 2px solid #a2a2a2;
 }
 form.contact-form input:hover,
 form.contact-form textarea:hover,
@@ -620,14 +662,17 @@ form.contact-form input:active,
 form.contact-form textarea:active,
 form.contact-form input:focus,
 form.contact-form textarea:focus {
-    border: 3px solid #ea9700;
+    border-color: #ea9700;
     outline-width: 0;
 }
 .contact-form .label {
-  color: #000;
+  color: #a2a2a2;
   padding: 10px 0;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 600;
+}
+.contact-form input:hover label {
+  color: #ea9700
 }
 .contact-form textarea {
   height: 150px;
@@ -639,20 +684,25 @@ form.contact-form textarea:focus {
   box-sizing: border-box;
   border: 3px solid #000;
 }
-input.submit-button {
+.contact-form input.submit-button {
   width: 40%;
   margin-top: 25px;
-  color: #ea9700;
-  background: #000;
+  color: #000;
+  background: #ea9700;
   border: none;
   font-size: 3rem;
   min-height: 50px;
-  border-radius: 5px;
+  border-radius: 25px;
   cursor: pointer;
   transition: all ease-in-out 220ms;
+  transition: all ease-in-out 220ms;
+  font-family: "Montserrat", sans-serif;
 }
-.contact-form input.submit-button:hover {
-  color: #ffa500;
-  background-color: rgb(39, 39, 39);
+.contact-form input.submit-button:hover,
+.contact-form input.submit-button:active,
+.contact-form input.submit-button:visited {
+  background-color: #000;
+  color: #fff;
   border: none;
+  border: 2px solid #ea9700;
 }
