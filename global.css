@@ -883,7 +883,7 @@ form.contact-form textarea:focus {
   /* Home section */
   #home {
     background-position: center;
-    background-attachment: unset;
+    /* background-attachment: unset; */
   }
   .home-text-container {
     width: 100%;
