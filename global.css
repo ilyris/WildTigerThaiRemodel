@@ -884,6 +884,7 @@ form.contact-form textarea:focus {
   #home {
     background-position: center;
     /* background-attachment: unset; */
+    margin-top: 110px;
   }
   .home-text-container {
     width: 100%;
