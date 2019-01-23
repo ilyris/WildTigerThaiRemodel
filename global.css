@@ -156,9 +156,10 @@ li.main-li {
   left: 30px;
   top: 85%;
 }
+
 .main-li:hover ul,
 .main-li:hover #triangle-up {
-    display: flex;
+  display: flex;
 }
 
 .food-type-drop-down-links {
@@ -454,6 +455,10 @@ ul.dropdown-menu {
   box-sizing: border-box;
 }
 
+p.slick-slide:focus {
+  outline: none;
+}
+
 #testimonials .next,
 #testimonials .previous {
   height: 50px;
@@ -479,6 +484,12 @@ ul.dropdown-menu {
   color: #ea9700;
 }
 
+.swiper-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
 .slide-container {
   display: none;
   font-size: 28px;
@@ -494,10 +505,15 @@ ul.dropdown-menu {
 
 .slide-container p {
   text-align: center;
-  width: 70%;
+  width: 70% !important;
   color: #000;
   margin: 0;
   padding: 1.5rem 0;
+}
+
+.slick-track {
+  display: flex !important;
+  justify-content: center;
 }
 
 .customers-name {
@@ -670,6 +686,7 @@ a.designer {
   flex-flow: row wrap;
   justify-content: space-evenly;
 }
+
 .dish-container {
   justify-content: space-between;
 }
@@ -842,4 +859,31 @@ form.contact-form textarea:focus {
   color: #fff;
   border: none;
   border: 2px solid #ea9700;
+}
+
+/*  Media Query */
+@media screen and (max-width: 740px) {
+
+  #testimonials {
+    height: auto;
+  }
+  .testimonial-slider {
+    padding: 0;
+  }
+  .slide-container {
+    font-size: 2em;
+  }
+
+  .slide-container p {
+    width: auto !important;
+    padding: 10px;
+  }
+  .customers-name {
+    font-size: 2rem;
+  }
+  .testimonials-title {
+    font-size: 4rem;
+    padding: 0;
+    padding-top: 40px;
+}
 }
