@@ -907,7 +907,8 @@ form.contact-form textarea:focus {
 
   .caption-button-container {
     padding: 0;
-    margin-bottom: 40px;
+    margin: 20px 0;
+    box-sizing: border-box;
   }
   .card-link {
     width: 100%;
@@ -916,9 +917,26 @@ form.contact-form textarea:focus {
   }
 
     /* About */
+    .caption-title {
+      padding: 20px;
+      font-size: 3.5rem;
+    }
+    p.caption-text {
+      width: 100%;
+      margin: 10px 20px;
+      padding: 0;
+  }
+  
+  
+    .right-paragraph-container {
+      width: 100%;
+      padding: 10px 20px;
+    }
+    .right-paragraph-container p.caption-text {
+      margin: 0;
+  }
     .menu-button {
       font-size: 1.4rem;
-      padding: 25px;
     }
 
   /* Testimonials */
