@@ -872,6 +872,8 @@ form.contact-form textarea:focus {
 }
 .main-ul {
   font-size: 1.6rem;
+  margin: 0;
+  width: 100%;
 }
 .main-li {
   width: 20%;
@@ -881,7 +883,7 @@ form.contact-form textarea:focus {
   /* Home section */
   #home {
     background-position: center;
-    background-size: 100% 70%;
+    background-attachment: unset;
   }
   .home-text-container {
     width: 100%;
