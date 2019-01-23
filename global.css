@@ -864,12 +864,27 @@ form.contact-form textarea:focus {
 /*  Media Query */
 @media screen and (max-width: 740px) {
 
+  /* Products */
+  #products {
+    height: auto;
+  }
+
+  .card-link {
+    width: 100%;
+    height: 300px;
+    margin: 15px 0;
+  }
+
+
+  /* Testimonials */
   #testimonials {
     height: auto;
   }
+
   .testimonial-slider {
     padding: 0;
   }
+
   .slide-container {
     font-size: 2em;
   }
@@ -878,12 +893,14 @@ form.contact-form textarea:focus {
     width: auto !important;
     padding: 10px;
   }
+
   .customers-name {
     font-size: 2rem;
   }
+
   .testimonials-title {
     font-size: 4rem;
     padding: 0;
-    padding-top: 40px;
-}
+  }
+
 }
