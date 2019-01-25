@@ -76,6 +76,7 @@ tr {
   font-size: 4rem;
   color: #000;
   font-family: "Lobster", cursive;
+  transition: all ease-in-out 200ms;
 }
 
 .main-navigation {
@@ -93,12 +94,6 @@ tr {
   font-size: 2.5rem;
   list-style: none;
   padding: 0 10px;
-}
-
-li.main-li {
-  height: 40px;
-  display: flex;
-  align-items: center;
 }
 
 .main-links {
@@ -329,11 +324,6 @@ ul.dropdown-menu {
   position: relative;
 }
 
-.card-link:hover .tri-card {
-  transform: scale(1.1);
-  filter: grayscale(0.8);
-}
-
 .card-title-container {
   position: relative;
   z-index: 2;
@@ -377,6 +367,7 @@ ul.dropdown-menu {
 }
 
 .product-overlay {
+  transition: all ease-in-out 350ms;
   position: absolute;
   transform: translateY(400px);
   width: 100%;
@@ -409,7 +400,12 @@ ul.dropdown-menu {
 .pop-up-container i {
   padding-left: 10px;
 }
-
+.main-ul.scrolled-ul {
+  font-size: 2rem;
+}
+.logo.scrolled-logo {
+  font-size: 3rem;
+}
 .pop-up-button {
   padding: 10px;
   box-sizing: border-box;
