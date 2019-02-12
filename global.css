@@ -273,6 +273,10 @@ ul.dropdown-menu {
 #drinks #menu {
   border-radius: 0;
 }
+.wine-container .product-price {
+  width: 100%;
+  padding: 5px 0;
+}
 /* Home section */
 #home, #bar {
   background-size: cover;
