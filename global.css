@@ -71,13 +71,16 @@ tr {
   padding-left: 20px;
   align-items: center;
 }
+
 .logo-container:hover .logo {
   color: #ff4e00;
   cursor: pointer;
 }
+
 .icon {
   height: 80px;
 }
+
 .logo {
   font-size: 3rem;
   transition: all ease-in-out 200ms;
@@ -98,7 +101,7 @@ tr {
 
 .main-ul {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   font-size: 2rem;
   list-style: none;
   padding: 0 10px;
@@ -114,7 +117,7 @@ tr {
 }
 
 li.main-li {
-  padding: 0 20px;
+  padding: 0 10px;
 }
 
 .main-links:hover {
@@ -198,6 +201,7 @@ ul.dropdown-menu {
 .dropdown-menu li:hover .food-type-drop-down-links {
   color: #ea9700;
 }
+
 .food-type-drop-down-links::before {
   content: "";
   position: absolute;
@@ -235,6 +239,7 @@ ul.dropdown-menu {
   top: 30%;
   box-shadow: 0px 0px 30px 5px #999;
 }
+
 .food-type-heading {
   font-size: 2.2rem;
   color: #fff;
@@ -243,6 +248,7 @@ ul.dropdown-menu {
   text-align: center;
   padding: 5px 0;
 }
+
 .food-type-ul {
   padding: 0;
   margin: 0;
@@ -252,31 +258,42 @@ ul.dropdown-menu {
   justify-content: space-around;
   flex-direction: column;
 }
+
 .food-type-ul li {
   list-style: none;
   padding: 10px 20px;
 }
+
 .food-type-ul a {
   color: white;
   font-size: 20px;
 }
+
 /* Bar Section */
 #bar {
   background: url(Bar.jpeg);
 }
+
 #home {
   background: url(background-image.jpg);
 }
+#About {
+  background: url(bread-color-copyspace-1565982.jpg);
+}
+
 #drinks #menu {
   border-radius: 0;
 }
+
 .wine-container .product-price {
   width: 100%;
   padding: 5px 0;
 }
+
 /* Home section */
 #home,
-#bar {
+#bar,
+#About {
   background-size: cover;
   background-repeat: no-repeat;
   height: 70vh;
@@ -289,7 +306,9 @@ ul.dropdown-menu {
   align-items: center;
   margin-top: 120px;
 }
-
+#About {
+  background-position: center;
+}
 .background-image-overlay {
   position: absolute;
   height: 100%;
@@ -465,21 +484,26 @@ ul.dropdown-menu {
   font-size: 3rem;
   color: #000;
 }
+
 .pop-up-container:hover {
   transform: scale(1.1);
   box-shadow: 0px 10px 30px -10px #111;
   background-color: #000;
   color: #fff;
 }
+
 .pop-up-container i {
   padding-left: 10px;
 }
+
 .main-ul.scrolled-ul {
   font-size: 2rem;
 }
+
 .logo.scrolled-logo {
   font-size: 3rem;
 }
+
 .pop-up-button {
   padding: 10px;
   box-sizing: border-box;
@@ -487,6 +511,7 @@ ul.dropdown-menu {
   justify-content: center;
   align-content: center;
 }
+
 .fa-phone {
   transform: rotate(180deg);
   padding-left: 0;
@@ -755,6 +780,7 @@ p.slick-slide:focus {
 .contact-text-container a:hover {
   color: #999;
 }
+
 .icon {
   max-width: 200px;
   min-width: 150px;
@@ -762,6 +788,7 @@ p.slick-slide:focus {
   height: auto;
   max-height: 110px;
 }
+
 .copyright {
   width: 100%;
   display: flex;
@@ -796,6 +823,7 @@ a.designer {
   padding: 40px;
   border-radius: 10px;
 }
+
 /* 
 #menu {
   padding: 44px;
@@ -996,61 +1024,97 @@ form.contact-form textarea:focus {
   border: 2px solid #ea9700;
 }
 
+/* About us page */
+
+.about-us-text-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+p.about-us-text {
+  width: 48%;
+  padding: 30px;
+  font-size: 20px;
+  letter-spacing: 1px;
+  line-height: 30px;
+  color: black;
+  max-width: 48%;
+  box-sizing: border-box;
+  min-width: 350px;
+}
+
 /*  Media Query */
 @media screen and (max-width: 1100px) {
   .footer-content-container.contact {
     margin: 0;
   }
+
   /* Menu Page */
 
   .food-information-wrapper {
     width: 100%;
     max-width: 100%;
   }
-    /* Bar Page */
-    .home-text-container.bar-menu {
-      margin: 0;
-      width: 100%;
-      margin-left: 40px;
-    }
-    .homepage-heading.bar-menu-heading {
-      font-size: 6rem;
-    }
+
+  /* Bar Page */
+  .home-text-container.bar-menu {
+    margin: 0;
+    width: 100%;
+    margin-left: 40px;
+  }
+
+  .homepage-heading.bar-menu-heading {
+    font-size: 6rem;
+  }
 }
+
 @media screen and (max-width: 740px) {
+
   /* Home page */
   .home-text-container {
     margin: 0;
   }
+
   #testimonials {
     height: auto;
   }
+
   .testimonials-title {
     padding: 0;
   }
+
   .footer-content-container {
     margin: 0;
   }
+
   .footer-content-container.location {
     margin-left: 40px;
   }
+
   .card-title {
     font-size: 3rem;
   }
+
   .pop-up-container {
     font-size: 2rem;
   }
+
   /* Menu Page */
   .food-type-link-container {
     display: none;
   }
+
   #menu-wrapper {
     padding: 0;
   }
+
   .dish-title,
   .page-title {
     font-size: 6rem;
   }
+
   .food-information-wrapper {
     width: 100%;
     max-width: 100%;
@@ -1060,23 +1124,34 @@ form.contact-form textarea:focus {
   #contact-page-container {
     padding: 0;
   }
+
   .main-wrapper {
     border-radius: 0;
   }
+
   .location-container,
   .form-container {
     padding: 0;
     width: 100%;
   }
+
   #contact-page-container {
     margin-top: 100px;
   }
+  /* About us page */
+  p.about-us-text {
+    width: auto;
+    max-width: none;
+  }
 }
+
 @media screen and (max-width: 500px) {
+
   /* Navigaton Bar */
   .logo {
     font-size: 2em;
   }
+
   .logo-container {
     padding: 0;
   }
@@ -1088,7 +1163,7 @@ form.contact-form textarea:focus {
   }
 
   .main-li {
-    width: 20%;
+    /* width: 20%; */
     justify-content: center;
   }
 
@@ -1133,12 +1208,15 @@ form.contact-form textarea:focus {
     height: 300px;
     margin: 15px 0;
   }
+
   .card-title {
     font-size: 5rem;
   }
+
   .pop-up-container {
     font-size: 3rem;
   }
+
   /* About */
   .caption-title {
     padding: 20px;
